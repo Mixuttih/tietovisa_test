@@ -2,7 +2,7 @@ import random
 import mysql.connector
 import tarina
 from geopy import distance
-from flask import Flask, Response
+from flask import Flask, Response, request, jsonify
 import json
 
 #SQL yhteys
@@ -15,11 +15,6 @@ yhteys = mysql.connector.connect(
     autocommit=True
 )
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return "Hello World!"
 #Vastausvalikko -funktio, joka printtaa kysymyksen ja vastausvaihtoehdot
 def vastausvalikko(kysymys_sanakirja):
     if kysymys_sanakirja["kysymysteksti"][0] == "What is the distance between " or kysymys_sanakirja["kysymysteksti"][0] == "How many kilotons of CO2 emmission are produced on a flight between ":
@@ -794,5 +789,3 @@ while game_over == True:
     elif restart == 'N':
         exit()
 
-if __name__ == '__main__':
-    app.run(use_reloader=True, host='127.0.0.1', port=3000)
