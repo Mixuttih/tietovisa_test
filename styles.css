@@ -7,7 +7,7 @@
     text-align: center;
     padding: 15px;
     margin: 5px;
-    height: 100px;
+    height: auto;
 }
 
 #vastausalue {
@@ -22,4 +22,20 @@
 #vastausalue button {
     padding: 15px;
     margin: 5px;
+}
+
+#oljenkorsialue {
+
+}
+
+#vihjealue {
+
+}
+
+#vastausnappi {
+
+}
+
+#oljenkorsinappi {
+
 }

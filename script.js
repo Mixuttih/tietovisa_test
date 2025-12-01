@@ -69,7 +69,7 @@ const game = {
     oljenkorsifunktio() {
         if (this.olki1 === 1 || this.olki2 === 1 || this.olki3 === 1) {
             const lifelineArea = document.createElement("div")
-            lifelineArea.id = "lifelinearea";
+            lifelineArea.id = "oljenkorsialue";
 
             const linebreak = document.createElement("br");
             vastausalue.appendChild(linebreak);
@@ -96,6 +96,45 @@ const game = {
                         //Oljenkorsi käytetty
                         this.olki1 = 0;
 
+                        //ASK AUDIENCE KOODI
+                        let yleiso = {
+                            A: Math.floor(Math.random() * 60) + 1,
+                            B: Math.floor(Math.random() * 60) + 1,
+                            C: Math.floor(Math.random() * 60) + 1,
+                            D: Math.floor(Math.random() * 60) + 1
+                        }
+                        //Tarkistetaan oikea, ja annetaan sille mahdollisuus saada enemmän ääniä
+                        for (let i = 1; i < 5; i++) {
+                            if (this.kysymys[`vastaus${i}`][2] === 1) {
+                                if (this.kysymys[`vastaus${i}`][0] === "A") {
+                                    yleiso.A = Math.floor(Math.random() * 90) + 1;
+                                }
+                                else if (this.kysymys[`vastaus${i}`][0] === "B") {
+                                    yleiso.B = Math.floor(Math.random() * 90) + 1;
+                                }
+                                else if (this.kysymys[`vastaus${i}`][0] === "C") {
+                                    yleiso.C = Math.floor(Math.random() * 90) + 1;
+                                }
+                                else if (this.kysymys[`vastaus${i}`][0] === "D") {
+                                    yleiso.D = Math.floor(Math.random() * 90) + 1;
+                                }
+                            }
+                        }
+                        //Tarkistetaan onko elementti jo olemassa
+                        //Jos on, muokataan sitä
+                        if (document.getElementById("vihjealue") != null) {
+                          document.getElementById("vihjealue").innerHTML = `The audience has voted:<br><ul><li>A: ${yleiso.A} votes</li><li>B: ${yleiso.B} votes</li><li>C: ${yleiso.C} votes</li><li>A: ${yleiso.D} votes</li></ul>`
+                        }
+                        //Jos ei, luodaan se
+                        else {
+                            const hintArea = document.createElement("div")
+                            hintArea.id = "vihjealue"
+                            hintArea.innerHTML = `The audience has voted:<br><ul><li>A: ${yleiso.A} votes</li><li>B: ${yleiso.B} votes</li><li>C: ${yleiso.C} votes</li><li>A: ${yleiso.D} votes</li></ul>`
+
+                            kysymysalue.appendChild(hintArea)
+                        }
+
+
                         lifelineArea.innerHTML = "";
                         if (this.olki1 === 1 || this.olki2 === 1 || this.olki3 === 1) {
                             lifelineArea.appendChild(lifelineButton)
@@ -121,6 +160,22 @@ const game = {
 
                         lifelineArea.innerHTML = "";
 
+                        //FIFTY FIFTY KOODI
+
+                        //Tarkistetaan onko elementti jo olemassa
+                        //Jos on, muokataan sitä
+                        if (document.getElementById("vihjealue") != null) {
+                          document.getElementById("vihjealue").textContent = "TÄMÄ ON FIFTY FIFTY PALAUTUS"
+                        }
+                        //Jos ei, luodaan se
+                        else {
+                            const hintArea = document.createElement("div")
+                            hintArea.id = "vihjealue"
+                            hintArea.textContent = "TÄMÄ ON FIFTY FIFTY PALAUTUS"
+
+                            kysymysalue.appendChild(hintArea)
+                        }
+
                         if (this.olki1 === 1 || this.olki2 === 1 || this.olki3 === 1) {
                             lifelineArea.appendChild(lifelineButton)
                         }
@@ -141,6 +196,22 @@ const game = {
                     callFriendButton.addEventListener("click", () => {
                         //Oljenkorsi käytetty
                         this.olki3 = 0;
+
+                        //CALL FRIEND KOODI
+
+                        //Tarkistetaan onko elementti jo olemassa
+                        //Jos on, muokataan sitä
+                        if (document.getElementById("vihjealue") != null) {
+                          document.getElementById("vihjealue").textContent = "TÄMÄ ON CALL A FRIEND PALAUTUS"
+                        }
+                        //Jos ei, luodaan se
+                        else {
+                            const hintArea = document.createElement("div")
+                            hintArea.id = "vihjealue"
+                            hintArea.textContent = "TÄMÄ ON CALL A FRIEND PALAUTUS"
+
+                            kysymysalue.appendChild(hintArea)
+                        }
 
                         lifelineArea.innerHTML = "";
 
