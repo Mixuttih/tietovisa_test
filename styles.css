@@ -85,3 +85,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     color: rgb(6, 18, 31);
 }
+
+* {
+  box-sizing: border-box;
+}
