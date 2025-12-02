@@ -8,10 +8,10 @@ import json
 #SQL yhteys
 yhteys = mysql.connector.connect(
     host='localhost',
-    port=3307, #3306 jos sinne asennettu MySQL
+    port=3306, #3306 jos sinne asennettu MySQL
     database='flight_game',
     user='root',
-    password='mikasana', #KÄYTTÄJÄN SALASANA
+    password='Sorsalampi2025', #KÄYTTÄJÄN SALASANA
     autocommit=True
 )
 app = Flask(__name__)

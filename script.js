@@ -271,10 +271,10 @@ const game = {
 
             //Uusi kierros, jos kierrokset ovat täynnä, lopetetaan peli
             if (this.kierros < 16) {
+                this.questionright()
                 //TÄMÄ KOODI KUTSUU UUDEN KYSYMYKSEN, SE KORVATAAN
                 //LUO UUSI FUNKTIO JOKA TYHJENTÄÄ KYSYMYSALUEEN
                 //JA PRINTTAA SIIHEN "VOITTAJA" -KUVAN SEKÄ NAPIN JOKA KUTSUU TUOTA YLLÄ OLEVAA INIT-FUNKTIOTA
-                this.init(this.player_name);
             } else {
                 //TÄMÄ KOHTA ON KUN PELAAJA VOITTAA PELIN
                 //LUO UUSI FUNKTIO JOKA ON SAMANLAINEN KUIN GAME OVER, MUTTA ILMOITTAA PELAAJALLE VOITOSTA
@@ -286,6 +286,11 @@ const game = {
             //TÄMÄ AJETAAN KUN PELAAJA VASTAA VÄÄRIN
             this.gameover();
         }
+    },
+    questionright() {
+        kysymysalue.textContent = "Right!";
+        kysymysalue.innerHTML += "<br><button class="nextbutton" onclick='game.init(this.player_name)'>Next</button> "
+        vastausalue.innerHTML = "";
     },
 
     //Printataan lopputulos
