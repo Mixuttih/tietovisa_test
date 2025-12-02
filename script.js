@@ -291,7 +291,7 @@ const game = {
     //Printataan lopputulos
     gameover() {
         kysymysalue.textContent = "GAME OVER! "+this.player_name+`'s Quiz finished! Score: ${this.score}`;
-        kysymysalue.innerHTML += "<br><button onclick='refresh()'>Try again?</button> "
+        kysymysalue.innerHTML += "<br><button onclick='refresh()'>Try again?</button>"
         vastausalue.innerHTML = "";
     }
 };
