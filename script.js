@@ -271,20 +271,26 @@ const game = {
 
             //Uusi kierros, jos kierrokset ovat täynnä, lopetetaan peli
             if (this.kierros < 16) {
+                //TÄMÄ KOODI KUTSUU UUDEN KYSYMYKSEN, SE KORVATAAN
+                //LUO UUSI FUNKTIO JOKA TYHJENTÄÄ KYSYMYSALUEEN
+                //JA PRINTTAA SIIHEN "VOITTAJA" -KUVAN SEKÄ NAPIN JOKA KUTSUU TUOTA YLLÄ OLEVAA INIT-FUNKTIOTA
                 this.init(this.player_name);
             } else {
+                //TÄMÄ KOHTA ON KUN PELAAJA VOITTAA PELIN
+                //LUO UUSI FUNKTIO JOKA ON SAMANLAINEN KUIN GAME OVER, MUTTA ILMOITTAA PELAAJALLE VOITOSTA
                 this.gameover();
             }
         }
         //Jos valitun vastauksen arvo oli 0, lopetetaan peli
         else {
+            //TÄMÄ AJETAAN KUN PELAAJA VASTAA VÄÄRIN
             this.gameover();
         }
     },
 
     //Printataan lopputulos
     gameover() {
-        kysymysalue.textContent = this.player_name+`'s Quiz finished! Score: ${this.score}`;
+        kysymysalue.textContent = "GAME OVER! "+this.player_name+`'s Quiz finished! Score: ${this.score}`;
         kysymysalue.innerHTML += "<br><button onclick='refresh()'>Try again?</button> "
         vastausalue.innerHTML = "";
     }
