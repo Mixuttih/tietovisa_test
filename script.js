@@ -7,7 +7,7 @@ const game = {
     //Alustetaan muuttujia peliin
     kysymys: [],
     kierros: 0,
-    score: 0,
+    score: 1,
     olki1: 1,
     olki2: 1,
     olki3: 1,
@@ -18,14 +18,20 @@ const game = {
         this.kysymys = await kysymyshaku(this.kierros);
         //Tallennetaan pelaajan nimi
         this.player_name = name;
-         //Printataan pelaajan nimi
+        //Printataan kysymysnumero
+        this.printScore();
+        //Printataan pelaajan nimi
         this.printUsername();
         //Printataan kysymys
         this.kysymysfunktio();
+
     },
     //Printataan pelaajan nimi
     printUsername() {
         document.getElementById("username").innerHTML = "Username:<br>"  + this.player_name;
+    },
+    printScore(){
+        document.getElementById("kysymysnro").innerHTML = "Kysymys:" + this.score;
     },
 
     kysymysfunktio() {
