@@ -18,8 +18,14 @@ const game = {
         this.kysymys = await kysymyshaku(this.kierros);
         //Tallennetaan pelaajan nimi
         this.player_name = name;
+         //Printataan pelaajan nimi
+        this.printUsername();
         //Printataan kysymys
         this.kysymysfunktio();
+    },
+    //Printataan pelaajan nimi
+    printUsername() {
+        document.getElementById("username").innerHTML = "Username:<br>"  + this.player_name;
     },
 
     kysymysfunktio() {
