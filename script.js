@@ -22,6 +22,7 @@ const game = {
         this.printScore();
         //Printataan pelaajan nimi
         this.printUsername();
+        this.exit();
         //Printataan kysymys
         this.kysymysfunktio();
 
@@ -31,7 +32,22 @@ const game = {
         document.getElementById("username").innerHTML = "Username:<br>"  + this.player_name;
     },
     printScore(){
-        document.getElementById("kysymysnro").innerHTML = "Kysymys:" + this.score;
+        document.getElementById("kysymysnro").innerHTML = "NRO/" + this.score;
+    },
+    exit(){
+         const button = document.createElement("button");
+
+         button.textContent = 'EXIT';
+         button.id = "exit";
+
+         //Event listener jokaiselle napille
+        button.addEventListener("click", () => {
+            this.refresh();
+        })
+    },
+
+    money() {
+
     },
 
     kysymysfunktio() {
@@ -57,7 +73,7 @@ const game = {
         const button = document.createElement("button");
 
         button.textContent = this.kysymys[`vastaus${i}`][1];
-        button.value = this.kysymys[`vastaus${i}`][0]
+        button.value = this.kysymys[`vastaus${i}`][0];
         button.id = "vastausnappi";
 
         //Event listener jokaiselle napille jos niitä painaa
