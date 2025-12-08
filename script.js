@@ -18,13 +18,13 @@ const game = {
         this.kysymys = await kysymyshaku(this.kierros);
         //Tallennetaan pelaajan nimi
         this.player_name = name;
-        //Printataan kysymysnumero
-        this.printScore();
         //Printataan pelaajan nimi
         this.printUsername();
         this.exit();
         //Printataan kysymys
         this.kysymysfunktio();
+        //Printataan kysymysnumero
+        this.printScore();
 
     },
     //Printataan pelaajan nimi
@@ -322,7 +322,7 @@ const game = {
 
         kysymysalue.textContent = "Right!";
         kysymysalue.appendChild(right_image);
-        kysymysalue.innerHTML += `<br><button class='continue_button' onclick='game.init("${this.player_name}")'>Next</button`
+        kysymysalue.innerHTML += `<br><button class='continue_button' onclick='game.init("${this.player_name}")'>Next</button>`
         vastausalue.innerHTML = "";
     },
 
