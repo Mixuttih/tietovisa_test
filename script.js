@@ -41,9 +41,9 @@ const game = {
          button.id = "exit";
 
          //Event listener jokaiselle napille
-        button.addEventListener("click", () => {
-            this.refresh();
-        })
+        button.addEventListener("click", () => {refresh();
+        });
+        exit.appendChild(button);
     },
 
     money() {
@@ -322,7 +322,7 @@ const game = {
 
         kysymysalue.textContent = "Right!";
         kysymysalue.appendChild(right_image);
-        kysymysalue.innerHTML += "<br><button class='continue_button' onclick='game.init(this.player_name)'>Next</button> "
+        kysymysalue.innerHTML += `<br><button class='continue_button' onclick='game.init("${this.player_name}")'>Next</button`
         vastausalue.innerHTML = "";
     },
 
