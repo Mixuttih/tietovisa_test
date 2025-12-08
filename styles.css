@@ -1,10 +1,8 @@
 body{
     background-color: #3f7cc5;
     background-image: url(gif/private\ plane.jpg);
-    display: grid;
-    grid-template-columns: 10% 20% 20% 20% 20% 10%;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
-}
+    max-height: 100vw;
+
 header {
     display: grid;
     grid-template-columns: 10% 20% 20% 20% 20% 10%;
@@ -31,6 +29,11 @@ header {
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 1;
+    padding: 1vw;
+    margin: 2%;
+    border-radius: 5vw;
+    color: rgb(6, 18, 31);
+    font-size: 2vw;
 
 }
 #username {
@@ -38,6 +41,7 @@ header {
     grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 2;
+    font-size: 2vw;
 
 }
 #kysymysnro {
@@ -45,47 +49,44 @@ header {
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 2;
+    font-
 
 }
 
 main {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 6;
+
 }
 
 #kysymysalue {
     border: 10px outset rgb(18, 54, 91);
-    border-radius: 25px;
+    border-radius: 2vw;
     text-align: center;
-    padding: 15px;
-    margin: 5px;
-    height: 200px;
+    padding: 1vw;
+    margin: 2%;
+    height: 30vw;
     background-color: rgb(31, 96, 161);
     font-family: 'Courier New', Courier, monospace;
     color: coral;
+    font-size: 2vw;
 
 }
 
 footer{
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 7;
-    grid-row-end: 8;
+
 }
 #vastausalue {
     text-align: center;
-    border-radius: 25px;
+    border-radius: 2vw;
     font-family: 'Courier New', Courier, monospace;
     color: coral;
+
 }
 
 
 #vastausalue input {
-    padding: 15px;
-    margin: 5px;
-    border-radius: 25px;
+    padding: 1vw;
+    margin: 2%;
+    border-radius: 2vw;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(6, 18, 31);
 }
@@ -99,7 +100,7 @@ footer{
     border-radius: 2vw;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(6, 18, 31);
-    font-size: 3vw;
+    font-size: 2vw;
 
 }
 
@@ -108,7 +109,6 @@ footer{
 
 #vastausalue button:hover {
     background-color: lightgray;
-    border-radius: 25px;
 }
 
 
