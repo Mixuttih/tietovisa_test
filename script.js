@@ -35,15 +35,18 @@ const game = {
         document.getElementById("kysymysnro").innerHTML = "NRO/" + this.score;
     },
     exit(){
-         const button = document.createElement("button");
+         const exit_button = document.createElement("button");
 
-         button.textContent = 'EXIT';
-         button.id = "exit";
+         exit_button.textContent = 'EXIT';
+         exit_button.id = "exit";
 
          //Event listener jokaiselle napille
-        button.addEventListener("click", () => {refresh();
+        exit_button.addEventListener("click", () => {refresh();
         });
-        exit.appendChild(button);
+        document.getElementById("exit").appendChild(exit_button);
+
+
+
     },
 
     money() {
