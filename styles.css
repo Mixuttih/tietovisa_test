@@ -1,11 +1,11 @@
 body{
     background-color: #3f7cc5;
     background-image: url(gif/private\ plane.jpg);
-    max-height: 100vw;
+    max-height: 100Vw;
 
 header {
     display: grid;
-    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto auto auto;
     grid-column-start: 1;
     grid-column-end: 6;
@@ -18,38 +18,38 @@ header {
 
 }
 #logo {
-     grid-column-start: 3;
-    grid-column-end: 5;
-    font-size: 5vw;
+     grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 5Vw;
 
 
 }
 #exit {
-    grid-column-start: 6;
-    grid-column-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
-    padding: 1vw;
+    padding: 1Vw;
     margin: 2%;
-    border-radius: 5vw;
+    border-radius: 5Vw;
     color: rgb(6, 18, 31);
-    font-size: 2vw;
+    font-size: 2Vw;
 
 }
 #username {
-    grid-column-start: 6;
-    grid-column-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 2;
-    font-size: 2vw;
+    font-size: 3Vw;
 
 }
 #kysymysnro {
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 2;
-    font-
+    font-size: 3Vw;
 
 }
 
@@ -61,13 +61,13 @@ main {
     border: 10px outset rgb(18, 54, 91);
     border-radius: 2vw;
     text-align: center;
-    padding: 1vw;
+    padding: 1Vw;
     margin: 2%;
-    height: 30vw;
+    height: 200px;
     background-color: rgb(31, 96, 161);
     font-family: 'Courier New', Courier, monospace;
     color: coral;
-    font-size: 2vw;
+    font-size: 2Vw;
 
 }
 
@@ -76,7 +76,7 @@ footer{
 }
 #vastausalue {
     text-align: center;
-    border-radius: 2vw;
+    border-radius: 2Vw;
     font-family: 'Courier New', Courier, monospace;
     color: coral;
 
@@ -84,7 +84,7 @@ footer{
 
 
 #vastausalue input {
-    padding: 1vw;
+    padding: 1Vw;
     margin: 2%;
     border-radius: 2vw;
     font-family: 'Courier New', Courier, monospace;
@@ -93,11 +93,11 @@ footer{
 
 #vastausalue button {
     width: 20%;
-    padding: 1vw;
+    padding: 1Vw;
     margin: 2%;
     border-radius: 5vw;
     background-color: white;
-    border-radius: 2vw;
+    border-radius: 2Vw;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(6, 18, 31);
     font-size: 2vw;
