@@ -63,15 +63,13 @@ main {
     text-align: center;
     padding: 1Vw;
     margin: 2%;
-    height: 200px;
+    height: auto;
     background-color: rgb(31, 96, 161);
     font-family: 'Courier New', Courier, monospace;
     color: coral;
     font-size: 2Vw;
 
 }
-
-footer{
 
 }
 #vastausalue {

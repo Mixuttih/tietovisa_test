@@ -27,6 +27,7 @@ const game = {
         this.printScore();
 
     },
+
     //Printataan pelaajan nimi
     printUsername() {
         document.getElementById("username").innerHTML = "Username:<br>"  + this.player_name;
@@ -328,7 +329,7 @@ const game = {
         kysymysalue.innerHTML += `<p class="reaktion_text">Right!</p>`
         kysymysalue.appendChild(right_image);
         vastausalue.innerHTML = "";
-        kysymysalue.innerHTML += `<br><button class='continue_button' onclick='game.init("${this.player_name}")'>Next</button>`
+        vastausalue.innerHTML += `<br><button class='continue_button' onclick='game.init("${this.player_name}")'>Next</button>`
 
     },
 
